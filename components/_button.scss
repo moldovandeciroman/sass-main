@@ -1,0 +1,118 @@
+.btn{
+
+    &:link, &:visited, &
+    {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding:25px 60px;
+        display:inline-block;
+        position:relative;
+        border-radius:100px;
+        transition:all .2s; 
+        margin-top: 40px;
+        border:none;
+        cursor:pointer;
+        font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.3;
+    }
+
+    &-1:link{
+        margin-top:0px;
+        margin-bottom:100px;
+    }
+    
+    &-white{
+        background-color: $color-white;
+        color:777;
+        text-decoration: none;
+    }
+
+    &-green{
+        background-color: rgb(48, 199, 48);
+        color:777;
+        text-decoration: none;
+    }
+    
+    &:hover, &:focus{
+        transform: translateY(-3px);
+        box-shadow: 0 5px 10px rgba(0, 0 ,0, .2);
+        text-decoration: none;
+    }
+    
+    &:active, &:focus{
+        outline:none;
+        transform: translateY(-1px);
+        text-decoration: none;
+    }
+    
+    &::after{
+        content: "";
+        text-decoration: none;
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 100px;
+        position: absolute;
+        z-index: -1;
+        right:0px;
+        top:0;
+        transition: all .4s;
+        
+    }
+    
+    &-white::after{
+        background-color: $color-white;
+    }
+    
+    &-green::after{
+        background-color: rgb(48, 199, 48);
+    }
+
+    &:hover::after{
+        transform: scale(1.5);
+        opacity: 0;
+    }
+    &-animated{
+        animation: moveInBottom .5s ease-out;
+        animation-fill-mode: backwards;
+    }
+    
+}
+
+.btn-text{
+    &:link,
+    &:visited{
+        color: rgba(51, 24, 114, 0.467);
+        display:inline-block;
+        font-size:1.3rem;
+        font-weight: 900;
+        border-bottom: 3px solid rgba(90, 21, 251, 0.367);
+        padding: 6px 10px;
+        transition: all .2s;
+        
+    }
+
+   
+
+    &:hover{
+        background-color: rgba(65, 36, 119, 0.507);
+        color:white;
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.151);
+        border-radius: 10px;
+        transform:translateY(-2px); 
+        }
+
+    &:active{
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.151);
+        transform: translateY(0);
+    }
+}
+
+.learn-more-1{
+    text-align: center;
+}
+
+
+

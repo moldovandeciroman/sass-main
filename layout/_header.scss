@@ -1,0 +1,32 @@
+.header{
+    height: 95vh;
+    background-image:linear-gradient(to right bottom, $color-primary-light, $color-primary-dark) ,url(../img/jiu_jitsu_main.jpg);
+    background-size:cover;
+    background-color:red($color: red);
+    background-repeat:no-repeat;
+    background-position: top;
+    position: relative;
+    clip-path: polygon(0 0,100% 0, 100% 75vh, 0 100%);
+
+    &__logo-box
+{
+    position: absolute;
+    right:0px;
+};
+
+&__logo{
+    height: 40px;
+}
+
+
+
+&__textbook{
+    position:absolute;
+    top:40%;
+    left:50%;
+    transform:translate(-50%, -40%);
+    text-align: center;
+};
+
+}
+

@@ -1,0 +1,96 @@
+.form{
+    &__input{
+        font-size: 1.2rem;
+        padding: 1.1rem 1.4rem;
+        border-radius: 4px;
+        background-color: rgba(white, .5);
+        border: none;
+        font-family: inherit;
+        border-bottom: 3px solid transparent;
+        width:100%;
+        display:block;
+        transition: all .5s;
+        color:inherit;
+
+        &::-webkit-input-placeholder{
+            color: rgb(78, 73, 73);
+        }
+
+        &:focus:invalid{
+            border-bottom: 3px solid red;
+        }
+    }
+
+    &__group:not(:last-child){
+        margin-bottom:0.3rem;
+    }
+
+    &__input:focus{
+        outline:none;
+        box-shadow: 0 1rem 2rem (black, 0.1);
+        border-bottom: 3px solid green;
+    }
+
+    &__label{
+        font-size: 1rem;
+        font-weight: 700;
+        margin-left:1.7rem;
+        margin-top: .5rem;
+        display:block;
+        transition: all .5s;
+    }
+
+  &__input:placeholder-shown + &__label{
+      opacity:0;
+      visibility: hidden;
+      transform: translateY(-3.3rem)
+  }
+
+  &__radio-group{
+      width:49%;
+      display: inline-block;
+  }
+
+  &__radio-label{
+      font-size:1.1rem;
+      cursor:pointer;
+      position: relative;
+      padding-left:3rem;
+  }
+
+  &__radio-button{
+    height: 1.9rem;
+    width: 1.9rem;
+    border: 5px solid rgba(128, 0, 128, 0.445);
+    border-radius: 50%;
+    display:inline-block;
+    position: absolute;
+    top:0rem;
+    left: -.3rem;
+
+
+        &::after{
+            height:0.8rem;
+            width:0.8rem;
+            content: "";
+            display:block;
+            border-radius: 50%;
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+            background-color:rgba(128, 0, 128, 0.445); 
+            opacity:0;
+            transition: opacity .3s;
+        }
+  }
+
+  &__radio-input:checked ~ &__radio-label &__radio-button::after{
+    opacity: 1;
+  }
+
+  &__radio-input{
+      opacity:0;
+  }
+
+}
